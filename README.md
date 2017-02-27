@@ -5,8 +5,8 @@ An easy to deploy check-in and label printing web application for JAFRS like reg
 ## Deploy
 This is a static web application with bundled dependencies.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https://github.com/techx/jafrs-checkin)
-#### or Local Testing
+#### Host on any static server like an S3 bucket
+#### or Locally
 ```
 python -m SimpleHTTPServer
 ```
