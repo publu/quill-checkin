@@ -10,7 +10,7 @@ $.urlParam = function(name) {
 
 $(document).ready(function() {
   // Config stuff
-  $("header-text").text(APP_NAME);
+  $(".header-text").text(APP_NAME);
 
   // Get the JWT
 	var jwt = $.urlParam('jwt');
