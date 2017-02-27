@@ -28,10 +28,5 @@ Use the `js/configure.js` file to set the `API_ROOT` and `APP_NAME` to work with
 
 * Hit Print!
 
-## Troubleshooting
-
-#### Heroku doesn't deploy! Wot do?
-This is a private repository. Make sure your heroku application is associated with a github account that has access to this.
-
 [dymo-win]: http://download.dymo.com/dymo/Software/Win/DLS8Setup.8.5.1.exe
 [dymo-mac]: http://download.dymo.com/dymo/Software/Mac/DLS8Setup.8.5.2.dmg
