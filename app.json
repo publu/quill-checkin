@@ -2,4 +2,9 @@
   "name": "JAFRS CheckIn",
   "description": "A checkin system for JAFRS based registration systems",
   "repository": "https://github.com/techx/jafrs-checkin",
+  "buildpacks": [
+    {
+      "url": "https://github.com/pearkes/heroku-buildpack-static"
+    }
+  ]
 }
