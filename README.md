@@ -14,6 +14,7 @@ python -m SimpleHTTPServer
 ## Configure
 
 Use the `js/configure.js` file to set the `API_ROOT` and `APP_NAME` to work with your database.
+Change the `img/footer.png` to change the label image that will be printer. The file must be exactly `520x299`.
 
 ## Usage
 
