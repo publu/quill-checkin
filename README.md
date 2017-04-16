@@ -1,6 +1,6 @@
-JAFRS Check-In & Label Printing
+Quill Check-In & Label Printing
 ==============
-An easy to deploy check-in and label printing web application for JAFRS like registration systems.
+An easy to deploy check-in and label printing web application for [Quill](https://github.com/techx/quill).
 
 ## Deploy
 This is a static web application with bundled dependencies.
