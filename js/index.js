@@ -13,14 +13,14 @@ $(document).ready(function() {
   $(".header-text").text(APP_NAME);
 
   // Get the JWT
-	var jwt = $.urlParam('jwt');
-	if (jwt == null && getStoredJWT() == undefined) {
-		redirectToReg();
-	}
-	else {
-		if (jwt != null) storeJWT(jwt);
-		validateJWT(undefined);
-	}
+  var jwt = $.urlParam('jwt');
+  if (jwt == null && getStoredJWT() == undefined) {
+    redirectToReg();
+  }
+  else {
+    if (jwt != null) storeJWT(jwt);
+    validateJWT(undefined);
+  }
 
   isAdmin();
 
@@ -55,7 +55,7 @@ function execSearch(query) {
     $('#results').html('');
     $.tmpl("searchResult", filteredUsers).appendTo("#results");
   }, function(err) {
-		redirectToReg();
+    redirectToReg();
   });
 }
 
