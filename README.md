@@ -2,7 +2,9 @@ Quill Check-In & Label Printing
 ==============
 An easy to deploy check-in and label printing web application for [Quill](https://github.com/techx/quill).
 
-![Screenshot](http://i.imgur.com/HFH5NVT.png)
+<p align="center">
+	<img src="http://i.imgur.com/HFH5NVT.png" alt="Screenshot" width=600 />
+</p>
 
 ## Deploy
 This is a static web application with bundled dependencies.
