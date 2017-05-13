@@ -38,7 +38,7 @@ function execSearch(query) {
 
   var markup = '<div class="item"> <div class="content"> <a class="header">${profile.name}</a> <div class="meta"> ${profile.school}</div><div class="extra"> <div class="ui right floated primary button" onclick="drawLabel(\'${profile.name}\', \'${profile.school}\', \'${_id}\')"> Print & Checkin <i class="right chevron icon"></i> </div></div></div></div>';
   $.template("searchResult", markup);
-  apiCall(API_ROOT + '/users', {
+  apiCall(API_ROOT + '/api/users', {
     text: query,
     page: 0,
     size: 50
@@ -75,7 +75,7 @@ function drawLabel(name, school, id) {
   context.font = '18px Open Sans';
   context.fillText(school, canvas.width/2 - context.measureText(school).width/2, 130);
 
-  apiCallPost(API_ROOT + '/users/' + id + '/checkin', undefined, function() {
+  apiCallPost(API_ROOT + '/api/users/' + id + '/checkin', undefined, function() {
     var image = new Image();
     image.onload = function() {
         context.drawImage(image, 0, 0);

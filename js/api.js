@@ -13,7 +13,7 @@ function getRedirectURL() {
 function apiCall(url, data, callback, error) {
     $.get({url: url,
                  beforeSend: function (xhr) {
-                    xhr.setRequestHeader("Authorization", "JWT " + getStoredJWT());
+                    xhr.setRequestHeader("x-access-token", getStoredJWT());
                  },
                  data: data,
                  success: callback,
@@ -23,7 +23,7 @@ function apiCall(url, data, callback, error) {
 function apiCallPost(url, data, callback, error) {
     $.post({url: url,
                  beforeSend: function (xhr) {
-                    xhr.setRequestHeader("Authorization", "JWT " + getStoredJWT());
+                    xhr.setRequestHeader("x-access-token", getStoredJWT());
                  },
                  data: data,
                  success: callback,
@@ -31,7 +31,7 @@ function apiCallPost(url, data, callback, error) {
 }
 
 function validateJWT(success) {
-    apiCall(API_ROOT + '/orders', undefined,
+    apiCall(API_ROOT + '/users/stats', undefined,
     function(data) {
         console.log("[DEBUG] Session is valid!");
         // success();
@@ -44,20 +44,7 @@ function validateJWT(success) {
 }
 
 function isAdmin() {
-    try {
-        var decoded = jwt_decode(getStoredJWT());
-        // Parse the JWT
-        var ret = {};
-        if (decoded.roles[0][2] == "admin") {
-            return true;
-        }
-        else {
-            throwError();
-        }
-    }
-    catch (e) {
-        throwError();
-    }
+    return true; // FIXME Jank
 }
 
 function throwError(message) {
